@@ -2231,6 +2231,10 @@ retry_find_task:
 
 	ret = cgroup_attach_task(cgrp, tsk, threadgroup);
 
+	if (!ret && !memcmp(cgrp->kn->name, "top-app", sizeof("top-app"))) {
+		cpu_input_boost_kick();
+	}
+
 	threadgroup_unlock(tsk);
 
 	put_task_struct(tsk);
