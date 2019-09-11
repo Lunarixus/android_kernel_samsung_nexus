@@ -80,5 +80,8 @@ GTAGS
 *~
 \#*#
 
-# xerium specific
 out
+drivers/gator/gator_src_md5.h
+security/selinux_n/av_permissions.h
+security/selinux_n/flask.h
+
