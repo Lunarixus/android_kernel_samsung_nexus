@@ -63,6 +63,10 @@
 
 #include <linux/atomic.h>
 
+#ifdef CPU_INPUT_BOOST
+#include <linux/cpu_input_boost.h>
+#endif
+
 /* css deactivation bias, makes css->refcnt negative to deny new trygets */
 #define CSS_DEACT_BIAS		INT_MIN
 
